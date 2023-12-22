@@ -1,13 +1,17 @@
 ﻿using ConsoleApp1;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 Console.InputEncoding = Encoding.Unicode;
 Console.OutputEncoding = Encoding.Unicode;
-MyDate date1 = new MyDate();
-Console.WriteLine($"Дата за замовчуванням: {date1.getYear()}.{date1.getMonth()}.{date1.getDay()}  {date1.getHours()}:{date1.getMinutes()}");
 
-MyDate date2 = new MyDate(2005, 12, 29, 12, 30);
-Console.WriteLine($"Дата з параметрами: {date2.getYear()}.{date2.getMonth()}.{date2.getDay()}  {date2.getHours()}:{date2.getMinutes()}");
+MyDate startDate = new MyDate(2023, 9, 2, 10, 30);
+Console.WriteLine($"Дата відправлення: {startDate.getYear()}.{startDate.getMonth()}.{startDate.getDay()}  {startDate.getHours()}:{startDate.getMinutes()}");
 
-MyDate date3 = new MyDate(date2);
-Console.WriteLine($"Скопійована дата: {date3.getYear()}.{date3.getMonth()}.{date3.getDay()}   {date3.getHours()}:{date3.getMinutes()}");
+MyDate finishDate = new MyDate(2023, 12, 23, 16, 45);
+Console.WriteLine($"Дата прибуття: {finishDate.getYear()}.{finishDate.getMonth()}.{finishDate.getDay()}  {finishDate.getHours()}:{finishDate.getMinutes()}");
+
+Airplane flight = new Airplane("Житомир", "Париж", startDate, finishDate);
+
+Console.WriteLine($"Час польоту: {flight.GetTotalTime()} хвилин");
+Console.WriteLine($"Прибув сьогодні? {flight.IsArrivingToday()}");
