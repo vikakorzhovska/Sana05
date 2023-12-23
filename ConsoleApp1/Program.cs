@@ -15,3 +15,10 @@ Airplane flight = new Airplane("Житомир", "Париж", startDate, finish
 
 Console.WriteLine($"Час польоту: {flight.GetTotalTime()} хвилин");
 Console.WriteLine($"Прибув сьогодні? {flight.IsArrivingToday()}");
+
+Currency euro = new Currency("Євро", 41.33);
+Product laptop = new Product("Laptop", 500.0, euro, 10, "Lenovo", 2.3);
+
+Console.WriteLine($"Ціна ноутбука в гривнях: {laptop.GetPriceInUAH()} UAH");
+Console.WriteLine($"Загальна ціна ноутбуків: {laptop.GetTotalPriceInUAH()} UAH");
+Console.WriteLine($"Загальна вага: {laptop.GetTotalWeight()} kg");
