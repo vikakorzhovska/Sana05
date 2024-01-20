@@ -18,8 +18,13 @@ namespace ConsoleApp1
             StartSity = "";
             FinishSity = "";
             StartDate = new MyDate();
-            FinishDate = new MyDate();
+            FinishDate = new MyDate(); 
         }
+        public Airplane(string startSity, string finishSity)
+        {
+            this.StartSity = startSity;
+            this.FinishSity = finishSity;
+        } 
         public Airplane(string startSity, string finishSity, MyDate startDate, MyDate finishDate)
         {
             this.StartSity = startSity;

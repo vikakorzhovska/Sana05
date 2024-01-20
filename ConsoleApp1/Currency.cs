@@ -15,6 +15,10 @@ namespace ConsoleApp1
             name = "";
             exRate = 0.0;
         }
+        public Currency(string name) 
+        {
+            this.name = name; 
+        }
         public Currency(string name, double exRate)
         {
             this.name = name;

@@ -23,7 +23,6 @@ namespace ConsoleApp1
             producer = "";
             weight = 0.0;
         }
-
         public Product(string name, double price, Currency cost, int quantity, string producer, double weight)
         {
             this.name = name;
@@ -33,7 +32,11 @@ namespace ConsoleApp1
             this.producer = producer;
             this.weight = weight;
         }
-
+        public Product(string name, double price)
+        {
+            this.name = name;
+            this.price = price;
+        }
         public Product(Product other)
         {
             this.name = other.Name;

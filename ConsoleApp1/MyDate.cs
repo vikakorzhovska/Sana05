@@ -22,6 +22,12 @@ namespace ConsoleApp1
             hours = 10;
             minutes = 10;
         }
+        public MyDate(int year, int month, int day)
+        {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
         public MyDate(int year, int month, int day, int hours, int minutes)
         {
             this.year = year;
